@@ -22,6 +22,11 @@ class My_controller extends CI_Controller
                 redirect('/');
                 exit;
             }
+            
+            if (isset($_SESSION['error'])) {
+                $this->load->view('error');
+                return;
+            }
         }
         $this->load->view('login', $data);
     }
@@ -29,7 +34,7 @@ class My_controller extends CI_Controller
     public function logout()
     {
         $_SESSION = array();
-        unset($_COOKIE[session_name()]);
+        setcookie(session_name(), $_COOKIE[session_name()], time()-3600, '/');
         session_destroy();
         redirect('/login');
         exit;

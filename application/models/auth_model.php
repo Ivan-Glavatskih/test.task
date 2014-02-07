@@ -73,6 +73,7 @@ class Auth_model extends CI_Model
             list($login, $pass) = explode(":", $string);
             $login = strtolower($login);
             if ($login == $inputData['login'] && $pass == $inputData['pass']) {
+                $_SESSION['userName'] = ucfirst($login);
                 return true;
             } 
         }

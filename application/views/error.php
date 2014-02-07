@@ -6,7 +6,7 @@
     <body>
         <div>
             <span>Неверные данные</span>
-            <a href="/login">Login</a>
+            <a href="/login">Back to login page</a>
         </div>
     </body>
 </html>

@@ -10,6 +10,9 @@ class User extends My_controller
     
     public function index()
     {
+        var_dump($_COOKIE[session_name()]);
+        
         $this->load->view('user');
     }
+    
 }
