@@ -29,10 +29,10 @@ class My_controller extends CI_Controller
                 exit;
             }
             
-            if (isset($_SESSION['error'])) {
+            /*if (isset($_SESSION['error'])) {
                 $this->load->view('error');
                 return;
-            }
+            }*/
         }
         $this->load->view('login', $data);
     }

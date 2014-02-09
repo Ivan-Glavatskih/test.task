@@ -13,5 +13,7 @@
                 <input type="submit" name="send" value="signin">
             </form>
         </div>
+        <br>
+        <span><?php echo @$_SESSION['error']; ?></span>
     </body>
 </html>
