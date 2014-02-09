@@ -127,7 +127,7 @@ class Auth_model extends CI_Model
             } else {
                 unset($_SESSION['block']);
                 unset($_SESSION['error']);
-                unlink('./' . $this->blockedFileName);
+                unlink($this->blockedFileName);
             }
         }
         return false;

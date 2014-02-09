@@ -28,11 +28,8 @@ class My_controller extends CI_Controller
                 redirect('/');
                 exit;
             }
-            
-            /*if (isset($_SESSION['error'])) {
-                $this->load->view('error');
-                return;
-            }*/
+            redirect('/login');
+            exit;
         }
         $this->load->view('login', $data);
     }
