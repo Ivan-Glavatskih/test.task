@@ -5,7 +5,7 @@
     </head>
     <body>
         <div>
-            <span><?php echo $alert; ?></span>
+            <span><?php echo @$_SESSION['block']; ?></span>
         </div>
     </body>
 </html>
